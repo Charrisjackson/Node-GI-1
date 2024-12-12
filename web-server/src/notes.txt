@@ -1,0 +1,50 @@
+//path node core module built in no need to install
+
+//express is actual a function called to create new express application
+//__dirname prints paths to directory if logged ro console
+// console.log(path.join(__dirname, '../public')) // __filename prints path to file
+//path.join is a function that returns final path taking in two arguments (path and string)
+//you can use core node module called path or use string manipulation to get to the correct path
+
+
+
+const app = express() //variable to store express application
+ path.join(__dirname, '../public') gives us a way to edit file path.
+
+app.use(express.static(publicDirectoryPath))// a way to customize server, it works through application until it finds a match for your call
+
+// app.get('',(req, res)=>{
+    // response. send()alows us to send something back to requester
+    // response.send('<h1>Weather</h1>') //you can send html back to brrowser by passing it into the string written in res.send
+    //json data can also be sent back. express can detect that we sent a json object and will automativcally parse data for us so it gets sent to requester correctly. can use objects or arrays
+
+app.get('/help',(req, res)=>{
+res.send([{name: 'andrew'},{
+    name:'sarah'}])
+}) //ads another route to help page
+
+
+//how to use send to send back other types of info
+app.get('/about',(req,res)=>{
+res.send('<h1>About</h1>') //response.send
+})
+app.get('/weather',(req,res)=>{
+res.send({forecast:"50 degrees",
+    location:'philidelphia'
+})
+})
+//app.get sets up new routes
+//settig up server to respon reponse when someone tries to get a resource at a specific url
+//get (route/ partial url, function ()=>{})
+    //starts up the server and has it listen to a specificport
+    app.listen(3000,()=>{
+        //the process of starting up a serever is an asynchrinous process even though it starts immediately
+        //web servers  wont stop on their own unless we stop it bc their job is to stay up and running listening anf provessing new request
+        // can be shut down using ctrl c
+        console.log('server is up in port 3000')
+    }) 
+
+    //use a single forward slash (/) instead of (./) to create an absolute path to css files rather than relative path
+    //to load in a stylesheet just link it in all of your html files.
+    //to load in a client side js file simply link it in your html using the <script> tag
+    //to load in an image 
