@@ -19,7 +19,7 @@
 --fetch is browser based api, can be used in all modern browsers but not accesible in node js.
 --fetch is a function and when you call it you pass through a string
 --calling fetch in clientside will kickoff asynch io operation just like calling request in node js. provide a function and function will run in future when data is avaliable.
---instead of passing calling callbavk function  to second argument like in node, we use .then method on return value and provide callback function. get access to response as first and only arg. lets use extract data or dump to console
+--instead of passing calling callback function  to second argument like in node, we use .then method on return value and provide callback function. get access to response as first and only arg. lets use extract data or dump to console
 --.then part of promise api--asynch await and promise work together
 --fetch used to get forecast data in clinetside js
 
