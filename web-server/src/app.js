@@ -1,5 +1,6 @@
 const path = require('path') //built in no need to install
 const express = require('express')
+const port = process.env.PORT || 3000//access heroku environment variable and default 3000 port
 const app = express()
 const hbs = require('hbs')
 const geocode = require('./utils/geocode')
@@ -91,9 +92,9 @@ res.send({
         })
     })
 
-    app.listen(3000,()=>{
+    app.listen(port,()=>{
        
-        console.log('server is up in port 3000')
+        console.log('server is up in port' + port)
     }) 
 
  
