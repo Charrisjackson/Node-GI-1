@@ -4,7 +4,7 @@ const forecast = require('../utils/forecast');
 const url = 'https://api.weatherstack.com/current?access_key=42dbd0af240c24715cebe41186164b6f&query=37.8267,-122.4233&units=f'
 
 const address= process.argv[2];
- 
+ //error handling
 console.log(process.argv)
 
 if(!address){
