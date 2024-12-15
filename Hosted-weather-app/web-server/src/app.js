@@ -1,5 +1,5 @@
 const path = require('path') //built in no need to install
-const express = require('express')
+const express = require('express') //importing express module
 const port = process.env.PORT || 3000//access heroku environment variable and default 3000 port
 const app = express()
 const hbs = require('hbs')
@@ -31,6 +31,7 @@ app.get('/about',(req,res)=>{
         title: 'About Me',
 name: 'Carmani H. Jackson'  })
 })
+
 app.get('/help',(req,res)=>{
     res.render('help',{
         title:'Help Page',
@@ -43,6 +44,7 @@ app.get('/help',(req,res)=>{
 
 
 app.get('/weather',(req,res)=>{
+    //eerror handling
     if(!req.query.address){
 return res.send({
     error:'Must provide an address'
