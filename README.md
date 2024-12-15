@@ -1,6 +1,6 @@
 # NodeJS-GI
 
-##Hosted Weather app
+#Hosted Weather app
 
 Welcome to Carmani's hosted Weather app. Submit the destination for which you want to see the weather forecast, and the weather stack API will provide you with information about that specific location.
 
@@ -12,7 +12,7 @@ You can interact with this app on the User interface, by using the hosted link p
 
 
 
-##Note taking app
+#Note taking app
 
 In this note-taking app, you will be able to read, edit, remove, add, save, and load notes configured inside of a JSON file, typically stored and separated in the form of an object with key-value pairs.
 
@@ -21,7 +21,7 @@ These JSON file objects contain the note title and it's body as properties, whic
 You must use the command line to interact with the note-taking app.
 
 
-##Language detection 
+#Language detection 
 
 
 Language detection code allows you to input a string as an argument to the language detect function, which we receive access to after installing the language detect npm.
