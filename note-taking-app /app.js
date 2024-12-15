@@ -1,12 +1,8 @@
 
-const chalk = require('chalk')
-const yargs = require('yargs')
+const chalk = require('chalk') //loading chalk npm mod to get   custom colorful console logs
+const yargs = require('yargs') //yargs to build interactive cli tools
 const notes = require('./notes')
-// const message = getNotes()
-// console.log(message);
-// const greenmsg = chalk.red.blue.inverse('error!')
-// console.log(greenmsg);
-// trouble in paradise 
+ //linking notes.js file
 
 
 //customize yargs version
@@ -17,19 +13,21 @@ yargs.version('1.1.0');
 yargs.command({
     command:'add', //setting up command name
     describe:'add a new note',//describes what command does
-    builder:{
+    builder:{  //defines options(arguments) the command accepts
         title:{
-            describe:'note title',
-            demandOption : true,
+            describe:'note title', //what it does/description
+            demandOption : true, //require title input
             type:'string' //making sure a string value for title is always there + required
         },
         body:{
             describe:"this is the body for the add command. nexted inside add commands builder object",
             demandOption: true, //makes it required
-            type:'string'
+            type:'string' 
         }
     },
-    handler: function (argv){
+    //function that executes when command is called
+    handler: function (argv)//argv=parsed command line arguments
+    {
         notes.addNote(argv.title, argv.body)
     }
 })
@@ -106,8 +104,3 @@ yargs.parse() //parses arguments with all configuration details provided
 
 // console.log(process.argv[2]) //argv is a array that contaons all arguments provide
 
-//challenge add new option tp yargs for add command
-// set up body option for add command (customize builder option)
-// make body required and force it to be a string
-// log body handler
-// test

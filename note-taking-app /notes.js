@@ -31,15 +31,15 @@ if(!duplicateNote){
 
 
 const saveNotes = function(notes){
-const dataJSON = JSON.stringify(notes)
-fs.writeFileSync('notes.json',dataJSON)
+const dataJSON = JSON.stringify(notes) //stringify to convert js array into json string
+fs.writeFileSync('notes.json',dataJSON) //creating notes.json file using fs node mod , and adding json data defined above
 }
 const loadNotes = function(){
 //if any lines run an error, code will stop ad run catch condition
     try{
-        const dataBuffer = fs.readFileSync('notes.json')
-const dataJSON = dataBuffer.toString()
-return JSON.parse(dataJSON)
+        const dataBuffer = fs.readFileSync('notes.json') //reading contents of note file synchronously
+const dataJSON = dataBuffer.toString() //converting notes.json data to a string
+return JSON.parse(dataJSON) //return back json data parsed to js object
 
     } catch(e){
 return []
