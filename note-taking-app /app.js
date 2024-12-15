@@ -77,7 +77,7 @@ yargs.command({
 })
 //looks for notes with certain title and updates the blody of that note based on users input
 // cyan background on the chalk fetaure
-
+//
 yargs.command ({
     command:'edit',
     describe:'editing the notes',

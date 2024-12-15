@@ -4,7 +4,7 @@ const request = require('postman-request');
 const geocode = require('../utils/geocode');
 const forecast = require('../utils/forecast');
 //api url
-const url = 'https://api.weatherstack.com/current?access_key=42dbd0af240c24715cebe41186164b6f&query=37.8267,-122.4233&units=f'
+const url = 'https://api.weatherstack.com/current?access_key=1a103a01b2657215483acc822b54ca41&query=37.8267,-122.4233&units=f'
 
 const address= process.argv[2];
  //error handling

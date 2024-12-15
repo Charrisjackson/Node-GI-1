@@ -8,7 +8,7 @@ const forecast = (latitude,longitude,callback, units) => {
     const url = 'https://api.weatherstack.com/current?access_key=1a103a01b2657215483acc822b54ca41&query='+ latitude + ',' + longitude + '&units=' + units;
 
 //sends http get request to url, parses json response to js object
-//error parm for low level erros 
+//error param for low level errors 
 //{body} param = parsed response body destrcutured
     request({url, json:true}, (error,{body})=>{
         //error handling

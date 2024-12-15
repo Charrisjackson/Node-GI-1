@@ -2,9 +2,9 @@ const request = require('postman-request');
 
 
 
-const geocode = (adress, callback) => {
+const geocode = (address, callback) => {
     //storing api url to variable and adding endcodeuricomponent so browser allows special characters that mean something to be placed into url
-    const url = 'https://api.mapbox.com/search/geocode/v6/forward?q=' + encodeURIComponent(adress) + '&access_token=pk.eyJ1IjoiY2hhcnJpc2phY2tzb24iLCJhIjoiY200Z2hsb3Q1MWpmOTJqcHZpdW5lNTQ5MCJ9.DNnOHe0Wb1_igkcvCYdaSA&limit=1'
+    const url = 'https://api.mapbox.com/search/geocode/v6/forward?q=' + encodeURIComponent(address) + '&access_token=pk.eyJ1IjoiY2hhcnJpc2phY2tzb24iLCJhIjoiY200Z2hsb3Q1MWpmOTJqcHZpdW5lNTQ5MCJ9.DNnOHe0Wb1_igkcvCYdaSA&limit=1'
     
     request({url, json:true}, (error,{body})=>{
     if(error){ //low level error handling
