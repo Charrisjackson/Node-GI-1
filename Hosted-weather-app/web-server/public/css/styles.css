@@ -1,4 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+@import url('https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap');
+
 body{
     color: #333333;
     font-family:PT serif ;
@@ -11,8 +14,8 @@ body{
     flex-direction: column;
     min-height: 100vh;
 }
-.fa-solid .fa-cloud-sun-rain{
-    font-size: 40px;
+#icon{
+    font-size: 80px;
 }
 nav{
     background: ;
@@ -44,6 +47,7 @@ footer{
  padding:16px 0 ;
 
 }
+
 header{
     margin-top:16px ;
     margin-bottom: 48px;
@@ -71,4 +75,26 @@ button{
     background: #888888;
     color: white;
     padding: 8px;
+}
+#errordiv{
+    font-family: 'Press Start 2P', sans-serif;
+    font-size: 60px;
+   
+  
+}
+
+.error{
+    font-family: 'Press Start 2P', sans-serif;
+}
+
+#helpimg{
+    height: 500px;
+    width: 800px;
+}
+#errorpic{
+width: 600px;
+}
+#help-icon{
+    align-self: left;
+font-size: 60px;
 }

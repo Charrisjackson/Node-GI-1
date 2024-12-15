@@ -3,9 +3,9 @@ const request = require('postman-request');
 
 
 //defining forecast function & params
-const forecast = (latitude,longitude,callback) => {
+const forecast = (latitude,longitude,callback, units) => {
     //defining url variable, constructed to call weatherstack api with access key and queries
-    const url = 'https://api.weatherstack.com/current?access_key=42dbd0af240c24715cebe41186164b6f&query='+ latitude + ',' + longitude + '&units=f'
+    const url = 'https://api.weatherstack.com/current?access_key=1a103a01b2657215483acc822b54ca41&query='+ latitude + ',' + longitude + '&units=' + units;
 
 //sends http get request to url, parses json response to js object
 //error parm for low level erros 

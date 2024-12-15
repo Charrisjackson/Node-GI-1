@@ -5,6 +5,7 @@ const search = document.querySelector('input')
  const messageOne = document.querySelector('#message-1')
 //variable that stores access to html dom <p> element #2
 const messageTwo = document.querySelector('#message-2')
+const select = document.querySelector('select');
 messageTwo.textContent = ''
 
 
@@ -22,7 +23,7 @@ messageTwo.textContent = ''
     //.then to specify callback function once promise (http request) is completed
     //response.json to extra data as json
     //.then(data) contains parsed jsoon from response body
-fetch('/weather?address='+ location).then((response)=>{
+fetch('/weather?address='+ location + '&units=' + select.options[select.selectedIndex].value).then((response)=>{
     response.json().then((data)=>{
         if(data.error){ //error handling
          messageOne.textContent = data.error //printing error (msg) property from data object(response) to dom <p> tag 

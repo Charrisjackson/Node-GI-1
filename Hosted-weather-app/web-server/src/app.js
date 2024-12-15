@@ -36,6 +36,7 @@ app.get('/help',(req,res)=>{
     res.render('help',{
         title:'Help Page',
         message:'Do you need help?',
+     
         name:'Carmani H. Jackson'
        
     })
@@ -44,7 +45,11 @@ app.get('/help',(req,res)=>{
 
 
 app.get('/weather',(req,res)=>{
-    //eerror handling
+   
+     //grabbing the user's units from the req object
+     const {_, units} = req.query;
+
+       //error handling
     if(!req.query.address){
 return res.send({
     error:'Must provide an address'
@@ -62,7 +67,7 @@ return res.send({
                 location,
                 address:req.query.address
             })
-        })
+        }, units)
     })
 
     })

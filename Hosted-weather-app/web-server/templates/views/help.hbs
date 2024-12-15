@@ -4,17 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/styles.css">
-
+<script src="https://kit.fontawesome.com/59f0f74002.js" crossorigin="anonymous"></script>
     <title>Help</title>
-     <link rel="icon" href="/img/picslinksmead.png">
 </head>
 <body>
     {{!-- link to partial --}}
     <div class="main-content">
         {{>navbar}}
+        <i class="fa-solid fa-hand-point-up" id="help-icon"></i>
+        <div class="head">
     {{>header}} 
-   
+   <img src="/img/helppage.jpeg" alt="help image" id="helpimg">
+   </div>
     <p>{{message}}</p>
+    <p>Reference ReadMe file in repository for instructions.</p>
     </div>
     {{>footer}}
     

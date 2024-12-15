@@ -7,19 +7,24 @@
    
    <script src="https://kit.fontawesome.com/59f0f74002.js" crossorigin="anonymous"></script>
     <title>Weather</title>
-    {{!-- links.mead.io/pic3 kept giving me errors --}}
-     <link rel="icon" href="/img/picslinksmead.png"> 
+   
+     
 </head>
 <body>
     <div class="main-content">
       {{>navbar}}
-      <i class="fa-solid fa-cloud-sun-rain"></i>
+      <i class="fa-solid fa-cloud-sun-rain" id="icon"></i>
    {{>header}}
    <p>Use this site to get the weather for any place you desire !</p>
 
    <form>
     <input placeholder="Location">
     <button>Search</button>
+    <select name="units" id="">
+    <option value="m">Celcuis</option>
+     <option value="f">Farenheit</option>
+      <option value="s">Kelvin</option>
+    </select>
     {{!-- where error message will be primted if we need one --}}
     <div id="output">
     <p id="message-1"></p> 
